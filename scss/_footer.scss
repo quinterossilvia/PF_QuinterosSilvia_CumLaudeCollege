@@ -1,0 +1,29 @@
+footer{
+  .social{
+    width:200px;
+    display:flex;
+    padding: 10px;
+    border-radius:10px;
+  }
+  .social >a{
+    width:15%;
+    font-size:3rem;
+    height:10px;
+    display:flex;
+    justify-content:justify;
+    align-items:center;
+    cursor:pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    margin:10px;
+    transition: 0.4s;
+  }  
+  .social >a:hover{
+    transform:translateY(-10px);
+    color: var(--color);
+  }
+
+
+}
+
+  
