@@ -1,85 +1,90 @@
-main{
-  .container {
-    display: flex;
-    width: 100%;
-    padding: 4% 2%;
-    box-sizing: border-box;
-    height: 100vh;
-    .box {
-      flex: 1;
-      overflow: hidden;
-      transition: .5s;
-      margin: 0 2%;
-      box-shadow: 0 20px 30px rgba(0,0,0,.1);
-      line-height: 0;
-    }
-    .box > img {
-      width: 200%;
-      height: calc(100% - 10vh);
-      object-fit: cover; 
-      transition: .5s;
-    }
-      
-    .box > span {
-      font-size: 3.8vh;
-      display: block;
-      text-align: center;
-      height: 10vh;
-      line-height: 2.6;
-    }
-    .box:hover { flex: 1 1 50%; }
-      .box:hover > img {
-        width: 100%;
-        height: 100%;
-      }
-        
-    .box2 {
-      display: flex;
-      width: 100% ;
-      height: 50%;
-    }
-    
-  }
-  .container {
-    display: flex;
-    width: 100%;
-    padding: 4% 2%;
-    box-sizing: border-box;
-    height: 100vh;
-    .box {
-      flex: 1;
-      overflow: hidden;
-      transition: .5s;
-      margin: 0 2%;
-      box-shadow: 0 20px 30px rgba(0,0,0,.1);
-      line-height: 0;
-    }
-    
-    .box > img {
-      width: 200%;
-      height: calc(100% - 10vh);
-      object-fit: cover; 
-      transition: .5s;
-    }
-    
-    .box > span {
-      font-size: 3.8vh;
-      display: block;
-      text-align: center;
-      height: 10vh;
-      line-height: 2.6;
-    }
-    
-    .box:hover { flex: 1 1 50%; }
-    .box:hover > img {
-      width: 100%;
-      height: 100%;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;700&display=swap');
 
+body {
+  font-family: 'Jost', sans-serif;
+  // background-color : #212121;
+}
+main {
+  h1 {
+    color: white;
+    font-size: 36px;
+    text-align: center;
   }
-
+  
+  .image-wrapper {
+    display: $display;
+    flex-wrap: wrap;
+    justify-content: $justify-c;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  
+  
 }
 
 
+.media {
+  width: 30%;
+  height: 30%;
+  display: $display;
+  justify-content: $justify-c;
+  align-items: $align-i;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+}
 
+.media:hover {
+  cursor: pointer;
+}
 
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover .overlay {
+  opacity: 1;
+}
+
+img {
+  width: 100%;
+  z-index: -1;
+  margin: auto;
+  transform: scale(1);
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover img {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
+
+.image-details {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  z-index: 4;
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover .image-details {
+  top: 40%;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .media {
+    width: 100%;
+    height: 70%;
+  }
+}

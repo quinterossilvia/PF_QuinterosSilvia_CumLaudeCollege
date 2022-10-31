@@ -5036,7 +5036,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-light .navbar-brand {
-    color: rgba(0, 0, 0, .9)
+    color: rgba(151, 117, 253, 0.9)
 }
 
 .navbar-light .navbar-brand:focus,
@@ -7628,7 +7628,7 @@ fieldset:disabled .btn {
 }
 
 .d-flex {
-    display: flex !important
+    display: flex 
 }
 
 .d-inline-flex {
@@ -7937,7 +7937,7 @@ fieldset:disabled .btn {
 }
 
 .flex-nowrap {
-    flex-wrap: nowrap !important
+    flex-wrap: nowrap 
 }
 
 .flex-wrap-reverse {

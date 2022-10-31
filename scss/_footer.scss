@@ -1,29 +1,31 @@
 footer{
   .social{
     width:200px;
-    display:flex;
+    display:$display;
     padding: 10px;
     border-radius:10px;
   }
   .social >a{
     width:15%;
-    font-size:3rem;
+    font-size:2rem;
     height:10px;
-    display:flex;
-    justify-content:justify;
-    align-items:center;
+    display:$display;
+    justify-content:end;
+    align-items:$align-i;
     cursor:pointer;
     text-decoration: none;
     border-radius: 5px;
-    margin:10px;
+    margin: 10px;;
     transition: 0.4s;
   }  
   .social >a:hover{
     transform:translateY(-10px);
     color: var(--color);
   }
-
+  #logo{
+    width: 80px; 
+  }
 
 }
 
-  
+ 
